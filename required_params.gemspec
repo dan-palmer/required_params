@@ -8,9 +8,9 @@ Gem::Specification.new do |s|
   s.version     = RequiredParams::VERSION
   s.authors     = "Dan Palmer"
   s.email       = "dan@bitrecursive.com"
-  s.homepage    = "http://www.github.com"
-  s.summary     = "Check params in controller"
-  s.description = "Check params in controller"
+  s.homepage    = "https://github.com/dan-palmer/required_params"
+  s.summary     = "Verify params exist in a request"
+  s.description = "Verify params exist in a request before calling the desired action"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
