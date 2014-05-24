@@ -14,8 +14,16 @@ class TestController < ActionController::Base
 
   required_params :foo_action, params: %i{ required_param yet_another_required_param }
 
+  rescue_from RequiredParams::ParameterMissingError, with: :parameter_missing_handler
+
   def foo_action
     # do some funky controllerish stuff
+  end
+
+  protected
+
+  def parameter_missing_handler
+    # do some funky error handling stuff
   end
 
 end
