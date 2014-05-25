@@ -1,10 +1,5 @@
 require 'test_helper'
-
-class TestController < ActionController::Base
-  include RequiredParams
-  required_params :foo, params: %i{ bar baz }
-  def foo; end
-end
+require 'test_controller'
 
 class RequiredParamsTest < ActionController::TestCase
   tests TestController
@@ -19,7 +14,7 @@ class RequiredParamsTest < ActionController::TestCase
 
   test "adds a before action filter to the controller" do
     method_name = "validate_required_params_for_some_method"
-    TestController.expects(:before_action).with(method_name, { only: :some_method } )
+    @controller.class.expects(:before_action).with(method_name, { only: :some_method } )
     
     @controller.class.required_params :some_method, params: %i{ foo bar }
   end
