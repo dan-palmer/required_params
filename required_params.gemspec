@@ -1,6 +1,5 @@
 $:.push File.expand_path("../lib", __FILE__)
 
-# Maintain your gem's version:
 require "required_params/version"
 
 Gem::Specification.new do |s|
@@ -13,7 +12,7 @@ Gem::Specification.new do |s|
   s.description = "Verify params exist in a request before calling the desired action"
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "readme.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 4.1.1"

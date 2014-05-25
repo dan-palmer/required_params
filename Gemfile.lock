@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    required_params (0.0.1)
+    required_params (0.1.2)
       rails (~> 4.1.1)
 
 GEM
