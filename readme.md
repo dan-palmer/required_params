@@ -4,11 +4,13 @@ Verify parameters exist in the request's params map before allowing the intended
 
 ### install
 
-` gem install required_params `
+```ruby 
+gem install required_params
+```
 
 ### usage
 
-```
+```ruby
 class TestController < ActionController::Base
   include RequiredParams
 
